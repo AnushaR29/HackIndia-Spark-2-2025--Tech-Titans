@@ -1,0 +1,74 @@
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "Sakthu",
+  "lastName": "Balan",
+  "email": "sakthibalan@gmail.com",
+  "password": "1234567",
+  "role": "business"
+}
+
+//get
+GET http://localhost:5000/api/auth/users
+
+/////
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "password": "passpass",
+  "role": "freelancer"
+}
+
+
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "brindha@gmail.com",
+  "password": "12345678"
+}
+
+//
+GET http://localhost:5000/api/users
+Authorization: Bearer techtitans
+
+/////
+### Login (Get JWT Token)
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "brindha@gmail.com",
+  "password": "123456789"
+}
+
+////
+### Get All Users (Using JWT Token)
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+//////
+#####
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "email": "brindha@gmail.com",
+  "password": "12345678"
+}
+
+#####
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "$2b$10$pYwuZUy099LBx8SbLM.WIeccwJqnzD32MhxNMKsV8FHzN99xGcWaG"
+}
+
